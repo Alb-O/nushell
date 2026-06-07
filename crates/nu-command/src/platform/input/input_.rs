@@ -168,7 +168,6 @@ impl Command for Input {
         };
 
         let mut line_editor = Reedline::create();
-        line_editor = line_editor.with_ansi_colors(false);
         line_editor = match history {
             Some(h) => line_editor.with_history(Box::new(h)),
             None => line_editor,
